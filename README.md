@@ -1,8 +1,10 @@
  # This is a README for IDS 706 Mini Project 3
 
 ### Status Badges 
-
-
+[![Install](https://github.com/nogibjj/PeterdeGuzman_Mini3/actions/workflows/install.yml/badge.svg)](https://github.com/nogibjj/PeterdeGuzman_Mini3/actions/workflows/install.yml)
+[![Format](https://github.com/nogibjj/PeterdeGuzman_Mini3/actions/workflows/format.yml/badge.svg)](https://github.com/nogibjj/PeterdeGuzman_Mini3/actions/workflows/format.yml)
+[![Lint](https://github.com/nogibjj/PeterdeGuzman_Mini3/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/PeterdeGuzman_Mini3/actions/workflows/lint.yml)
+[![Test](https://github.com/nogibjj/PeterdeGuzman_Mini3/actions/workflows/test.yml/badge.svg)](https://github.com/nogibjj/PeterdeGuzman_Mini3/actions/workflows/test.yml)
 
 ### Project Motivation:
 This project creates a Python script that utilizes the Polars package to generate descriptive statistics and the Matplotlib package to produce data visualizations. 
