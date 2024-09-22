@@ -1,32 +1,26 @@
 # Test functions created in main.py script
 
-import zipfile
-
-from mylib.lib import mean_age, median_age, std_age, generate_hist_member_age_bycongress
 from test_lib import test_generate_hist_member_age_bycongress
 import numpy as np
-import pandas as pd
-from pathlib import Path
-
-file_zip = "ncvoter32.zip"
-file_txt = "ncvoter32.txt"
+import polars as pl
 
 
 if __name__ == "__main__":
-    with zipfile.ZipFile(file_zip) as z:
-        with z.open(file_txt) as f:
-            df = read_csv_ncvoterdata(f)
-    # test_generate_histogram()
-    test_generate_histogram_age(df)
-    # test_generate_populationpyramid()
-    test_generate_age_gender_pyramid(df)
+    # Load Test Data
+    np.random.seed(0)
+    n_individuals = 3000
+    ages = np.random.randint(80, 114, size=n_individuals)  # Ages between 80 and 113
+    parties = np.random.choice(
+        ["D", "R", "I"], size=n_individuals
+    )  # Randomly assign parties
+    congress_numbers = np.random.randint(
+        80, 113, size=n_individuals
+    )  # Congress numbers from 80 to 113
+
+    # Create a Polars DataFrame
+    test_df = pl.DataFrame(
+        {"age": ages, "party": parties, "congress": congress_numbers}
+    )
+    test_generate_hist_member_age_bycongress()
 
 main()
-
-
-# integration test
-# testing that the output files exist
-# run main()
-# then test out exactly the same way that you tested in the unit test .py file
-
-# create logic to delete the test output plots if they already exist

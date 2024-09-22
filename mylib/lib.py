@@ -1,22 +1,17 @@
+# Import Packages
 import polars as pl
-
-
 import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
 import os
 
 
 # Data Loading
 
 
-url = "https://github.com/fivethirtyeight/data/blob/master/congress-age/congress-terms.csv?raw=true"
+# url = "https://github.com/fivethirtyeight/data/blob/master/congress-age/congress-terms.csv?raw=true"
 
 
 def read_congressdata(url):
     return pl.read_csv(url, has_header=True, truncate_ragged_lines=True)
-
-
-df = read_congressdata(url)
 
 
 # Descriptive Statistics
@@ -66,7 +61,8 @@ def std_age(df):
 
 
 def generate_hist_member_age_bycongress(df, congress, plot_name):
-    # create a histogram of ages for Congressional Members as filtered for a specific Congress
+    # create a histogram of ages
+    # for Congressional Members as filtered for a specific Congress
     congress_df = df.filter(pl.col("congress") == congress)
     plt.figure(figsize=(10, 6))
     plt.hist(congress_df["age"], bins=20, color="orange", edgecolor="black")

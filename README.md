@@ -28,7 +28,7 @@ Note: This data was sampled from the Tyrell County, North Carolina dataset on re
 
 ### Project Directory
 ```
-PeterdeGuzman_IndividualProject1/
+PeterdeGuzman_Mini3/
 ├── .devcontainer/
 │   ├── devcontainer.json
 │   └── Dockerfile
