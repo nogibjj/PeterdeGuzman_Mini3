@@ -6,10 +6,6 @@ from mylib.lib import (
     mean_age,
     median_age,
     std_age,
-    recode_age_groups,
-    make_categorical_agecat,
-    generate_histogram_age,
-    generate_age_gender_pyramid,
 )
 
 
@@ -29,9 +25,6 @@ def main(file_zip, file_txt):
     # generate population pyramid of age and gender
     generate_age_gender_pyramid(df, "age_gender_pyramid")
 
-
-file_zip = "ncvoter32.zip"
-file_txt = "ncvoter32.txt"
 
 if __name__ == "__main__":
     main(file_zip, file_txt)

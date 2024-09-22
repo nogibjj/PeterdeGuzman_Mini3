@@ -8,7 +8,7 @@ nbval==0.11.0
 ruff==0.0.284
 
 #analysis & data viz
-pandas==2.2.2
+polars==1.7.1
 matplotlib==3.9.2
 numpy==2.1.0
 
