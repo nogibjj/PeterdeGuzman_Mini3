@@ -77,6 +77,3 @@ def generate_hist_member_age_bycongress(df, congress, plot_name):
     file_path = os.path.join(subfolder, plot_name)
     plt.savefig(file_path)
     plt.show()
-
-
-generate_hist_member_age_bycongress(df, 113, "113th_congress.png")

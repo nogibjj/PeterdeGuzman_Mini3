@@ -2,10 +2,8 @@
 
 import zipfile
 
-from mylib.lib import (
-    read_csv_ncvoterdata,
-)
-from test_lib import test_generate_histogram_age, test_generate_age_gender_pyramid
+from mylib.lib import mean_age, median_age, std_age, generate_hist_member_age_bycongress
+from test_lib import test_generate_hist_member_age_bycongress
 import numpy as np
 import pandas as pd
 from pathlib import Path

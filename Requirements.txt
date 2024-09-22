@@ -11,4 +11,3 @@ ruff==0.0.284
 polars==1.7.1
 matplotlib==3.9.2
 numpy==2.1.0
-

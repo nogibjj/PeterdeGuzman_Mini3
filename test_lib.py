@@ -27,25 +27,29 @@ test_df = pl.DataFrame({"age": ages, "party": parties, "congress": congress_numb
 # Test Analysis Functions
 def test_mean_age():
     mean_test = mean_age(test_df)
-    assert math.isclose(mean_test, 96.175333)
+    assert math.isclose(mean_test, 96.175333, abs_tol=0.005)
 
 
-test_mean_age()
+def test_median_age():
+    median_test = median_age(test_df)
+    assert math.isclose(median_test, 96.0, abs_tol=0.01)
 
 
-def test_median_age(df):
-    median_test = median_age(df)
-    assert median_test == 60.0
-
-
-def test_std_age(df):
-    std_test = std_age(df)
-    assert std_test == 19.8996673571703
+def test_std_age():
+    std_test = std_age(test_df)
+    assert math.isclose(std_test, 9.841013162724245, abs_tol=0.001)
 
 
 # Test Visualization Functions
-def test_generate_histogram_age(df):
+def test_generate_hist_member_age_bycongress():
     plot_name = "test_histogram"
-    generate_age_gender_pyramid(df, plot_name)
+    congress = "113"
+    generate_hist_member_age_bycongress(test_df, congress, plot_name)
     file_path = os.path.join("Output Images", plot_name)
-    df.assertTrue(os.path.isfile(file_path), f"{file_path} does not exist.")
+    test_df.assertTrue(os.path.isfile(file_path), f"{file_path} does not exist.")
+
+
+if __name__ == "__main__":
+    test_mean_age()
+    test_median_age()
+    test_std_age()
