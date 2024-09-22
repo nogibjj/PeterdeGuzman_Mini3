@@ -5,7 +5,7 @@ import numpy as np
 import polars as pl
 
 
-if __name__ == "__main__":
+def test_main():
     # Load Test Data
     np.random.seed(0)
     n_individuals = 3000
@@ -21,6 +21,7 @@ if __name__ == "__main__":
     test_df = pl.DataFrame(
         {"age": ages, "party": parties, "congress": congress_numbers}
     )
-    test_generate_hist_member_age_bycongress()
+    test_generate_hist_member_age_bycongress(test_df)
 
-main()
+
+test_main()

@@ -7,9 +7,6 @@ import os
 # Data Loading
 
 
-# url = "https://github.com/fivethirtyeight/data/blob/master/congress-age/congress-terms.csv?raw=true"
-
-
 def read_congressdata(url):
     return pl.read_csv(url, has_header=True, truncate_ragged_lines=True)
 
