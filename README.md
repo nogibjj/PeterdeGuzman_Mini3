@@ -16,7 +16,7 @@ This project uses data on U.S. Congressional members gathered by FiveThirtyEight
 Data was accessed from the following GitHub repository: https://github.com/fivethirtyeight/data/blob/master/congress-age/congress-terms.csv
 
 ### Functions Created in this Project
-    1. read_congressdata() - this function reads in the North Carolina voter registration data, and accounts for both the value of the first row being column names and the raw file being tab-delimited.
+    1. read_congressdata() - this function reads in the U.S. Congressional Member data, and accounts for both the value of the first row being column names and the raw file being tab-delimited.
     2. mean_age() - this function identifies the age column in the DataFrame and calculates the mean age.
     3. median_age() - this function identifies the age column in the DataFrame and calculates the median age.
     4. std_age() - this function identifies the age column in the DataFrame and calculates the standard deviation of age.
