@@ -1,50 +1,58 @@
- # This is a README for IDS 706 Individual Project 1
+ # This is a README for IDS 706 Mini Project 3
 
 ### Status Badges 
 
-### Youtube Video:
 
 
 ### Project Motivation:
-This project creates a Python script that utilizes the Pandas package to generate descriptive statistics and the Matplotlib package to produce data visualizations. 
+This project creates a Python script that utilizes the Polars package to generate descriptive statistics and the Matplotlib package to produce data visualizations. 
 
 
 ### Data Used in this Project:
-This project uses a subset of voter registration data for Durham County, North Carolina made available by the North Carolina State Board of Elections. This data was downloaded as a zipped file on September 16th, 2024. 
+This project uses data on U.S. Congressional members gathered by FiveThirtyEight. 
 
-More information and a link to the data is available at: https://www.ncsbe.gov/results-data/voter-registration-data
+Data was accessed from the following GitHub repository: https://github.com/fivethirtyeight/data/blob/master/congress-age/congress-terms.csv
 
 ### Functions Created in this Project
-    1. read_csv_ncvoterdata() - this function reads in the North Carolina voter registration data, and accounts for both the value of the first row being column names and the raw file being tab-delimited.
+    1. read_congressdata() - this function reads in the North Carolina voter registration data, and accounts for both the value of the first row being column names and the raw file being tab-delimited.
     2. mean_age() - this function identifies the age column in the DataFrame and calculates the mean age.
     3. median_age() - this function identifies the age column in the DataFrame and calculates the median age.
     4. std_age() - this function identifies the age column in the DataFrame and calculates the standard deviation of age.
-    5. generate_histogram_age() - this function identifies the age column in the DataFrame and createss a histogram to display the age distribution for a sample of registered voters in the county of interest. 
-    6. generate_pop_pyramind() 
+    5. generate_hist_member_age_bycongress() - this function creates a histogram of ages for U.S. Congressional Members as filtered for a specific Congress
 
 ### Example -- Data Visualization
-![alt text](output.png)
-Note: This data was sampled from the Tyrell County, North Carolina dataset on registered voters, and is not representative of the population. 
+![alt text](113th_congress.png)
 
 ### Project Directory
 ```
 PeterdeGuzman_Mini3/
+├── __pycache__/
 ├── .devcontainer/
 │   ├── devcontainer.json
 │   └── Dockerfile
+├── .pytestcache/
+├── .ruff_cache/
+├── __pycache__
 ├── .github/
 │   └── workflows/
-│       ├── main.yml
-├── .pytest_cache
-├── .ruff_cache
+│       ├── format.yml
+│       ├── install.yml
+│       ├── lint.yml
+│       └── test.yml
+├── mylib/
+│   └── lib.py
+├── Output Images/
+│       ├── test_histogram.png
+│       └── 113th_congress.png
 ├── .gitignore
+├── main.html
 ├── main.ipynb
+├── main.pdf
 ├── main.py
 ├── Makefile
-├── ncvoter89.txt
-├── output.png
 ├── README.md
 ├── Requirements.txt
+├── test_lib.py
 └── test_main.py
 ```
 
